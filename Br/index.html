@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mapa de Mesas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .mapa {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .mesa {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .mesa:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    .mesa.reservada {
+      background-color: #d9534f;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Mapa de Mesas</h2>
+
+  <div class="mapa">
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 1</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 2</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 3</div>
+    <div class="mesa reservada">Mesa 4</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 5</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 6</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 7</div>
+    <div class="mesa reservada">Mesa 8</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 9</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 10</div>
+  </div>
+
+  <script>
+    function selecionarMesa(mesa) {
+      if (mesa.classList.contains("reservada")) {
+        alert("Essa mesa já está reservada.");
+        return;
+      }
+
+      const mesaSelecionada = mesa.textContent;
+      const confirmar = confirm(`Deseja reservar a ${mesaSelecionada}?`);
+
+      if (confirmar) {
+        // Aqui vai o código para enviar a reserva no futuro
+        mesa.classList.add("reservada");
+        alert(`Reserva confirmada para ${mesaSelecionada}`);
+      }
+    }
+  </script>
+
+</body>
+      </html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mapa de Mesas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .mapa {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .mesa {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .mesa:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    .mesa.reservada {
+      background-color: #d9534f;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Mapa de Mesas</h2>
+
+  <div class="mapa">
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 1</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 2</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 3</div>
+    <div class="mesa reservada">Mesa 4</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 5</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 6</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 7</div>
+    <div class="mesa reservada">Mesa 8</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 9</div>
+    <div class="mesa" onclick="selecionarMesa(this)">Mesa 10</div>
+  </div>
+
+  <script>
+    function selecionarMesa(mesa) {
+      if (mesa.classList.contains("reservada")) {
+        alert("Essa mesa já está reservada.");
+        return;
+      }
+
+      const mesaSelecionada = mesa.textContent;
+      const confirmar = confirm(`Deseja reservar a ${mesaSelecionada}?`);
+
+      if (confirmar) {
+        // Aqui vai o código para enviar a reserva no futuro
+        mesa.classList.add("reservada");
+        alert(`Reserva confirmada para ${mesaSelecionada}`);
+      }
+    }
+  </script>
+
+</body>
+</html>
