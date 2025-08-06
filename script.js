@@ -77,3 +77,41 @@
                 behavior: 'smooth'
             });
         });
+<script>
+document.getElementById("reservationForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    document.getElementById("mesaModal").style.display = "block";
+});
+
+document.querySelector(".close").onclick = function() {
+    document.getElementById("mesaModal").style.display = "none";
+};
+
+window.onclick = function(event) {
+    if (event.target == document.getElementById("mesaModal")) {
+        document.getElementById("mesaModal").style.display = "none";
+    }
+};
+
+let mesas = document.querySelectorAll(".mesa");
+let mesaSelecionada = null;
+
+mesas.forEach(btn => {
+    btn.addEventListener("click", () => {
+        mesas.forEach(m => m.classList.remove("selected"));
+        btn.classList.add("selected");
+        mesaSelecionada = btn.dataset.id;
+        document.getElementById("mesaSelecionada").innerText = "Mesa selecionada: " + mesaSelecionada;
+    });
+});
+
+document.getElementById("confirmarReserva").addEventListener("click", () => {
+    if (mesaSelecionada) {
+        alert("Reserva confirmada para a mesa " + mesaSelecionada + "!");
+        document.getElementById("mesaModal").style.display = "none";
+        // Aqui você pode salvar a reserva no Firebase ou outro sistema
+    } else {
+        alert("Por favor, selecione uma mesa.");
+    }
+});
+</script>
