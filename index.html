@@ -327,8 +327,7 @@
                                 </select>
                             </div>
                             
-                            
-                            <button type="submit"  class="form-submit">Reservar agora</button>
+                            <button type="button" class="form-submit" onclick="mostrarMapaMesas()">Reservar agora</button>
                             
                         </form>
                     </div>
@@ -337,22 +336,21 @@
         </div>
     </section>
 <!-- Modal do Mapa de Mesas -->
-<div id="mesaModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3>Escolha sua mesa</h3>
-    <div class="mesa-mapa">
-      <!-- Exemplo com 6 mesas -->
-      <button class="mesa" data-id="1">Mesa 1</button>
-      <button class="mesa" data-id="2">Mesa 2</button>
-      <button class="mesa" data-id="3">Mesa 3</button>
-      <button class="mesa" data-id="4">Mesa 4</button>
-      <button class="mesa" data-id="5">Mesa 5</button>
-      <button class="mesa" data-id="6">Mesa 6</button>
+<div id="mapaMesas" style="display: none; margin-top: 30px;">
+    <h3>Selecione a mesa</h3>
+    <div class="grid-mesas">
+        <!-- 10 mesas como exemplo -->
+        <div class="mesa" onclick="reservarMesa(1)">1</div>
+        <div class="mesa" onclick="reservarMesa(2)">2</div>
+        <div class="mesa reservada">3</div>
+        <div class="mesa" onclick="reservarMesa(4)">4</div>
+        <div class="mesa" onclick="reservarMesa(5)">5</div>
+        <div class="mesa reservada">6</div>
+        <div class="mesa" onclick="reservarMesa(7)">7</div>
+        <div class="mesa" onclick="reservarMesa(8)">8</div>
+        <div class="mesa" onclick="reservarMesa(9)">9</div>
+        <div class="mesa reservada">10</div>
     </div>
-    <p id="mesaSelecionada" style="margin-top: 10px;"></p>
-    <button id="confirmarReserva">Confirmar Reserva</button>
-  </div>
 </div>
     <!-- Contato -->
     <section class="section" id="contato">
