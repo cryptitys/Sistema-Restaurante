@@ -1,4 +1,6 @@
- // Tema escuro/claro
+document.addEventListener("DOMContentLoaded", function() {
+    
+// Tema escuro/claro
         const themeToggle = document.getElementById('themeToggle');
         const html = document.documentElement;
         
@@ -115,3 +117,4 @@ document.getElementById("confirmarReserva").addEventListener("click", () => {
     }
 });
 </script>
+});
