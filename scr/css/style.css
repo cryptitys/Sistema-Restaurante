@@ -1,0 +1,182 @@
+/* Reset e Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Cabeçalho */
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: #ffffff; /* Navbar branca */
+    color: #333;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease-out;
+     justify-content: space-between; /* separa logo e menu */
+     padding: 0 25px; /* AUMENTE OU DIMINUA ESSE VALOR */
+}
+
+/* Navbar ao rolar */
+.navbar.scrolled {
+    min-height: 8vh;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== LOGO ===== */
+.logo a {
+    color: #6d28d9; /* Roxo vibrante */
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #2563eb; /* Azul suave ao passar o mouse */
+}
+/* Logo com imagem */
+.logo img {
+    height: 60px; /* tamanho ideal para a navbar */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao rolar */
+.navbar.scrolled .logo img {
+    height: 45px; /* diminui levemente ao rolar */
+}
+
+/* Efeito hover opcional */
+.logo a:hover img {
+    transform: scale(1.05);
+    }
+/*nav burguer*/
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* distância da borda direita */
+    top: 50%;    /* centraliza verticalmente */
+    transform: translateY(-50%); /* corrige o centralizado */
+}
