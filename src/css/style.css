@@ -180,67 +180,123 @@ body {
     top: 50%;    /* centraliza verticalmente */
     transform: translateY(-50%); /* corrige o centralizado */
 }
-/*hero*/
+
 /* HERO */
+/* ===== HERO ===== */
+
 .hero {
   position: relative;
   width: 100%;
-  min-height: 80vh;
+  height: 90vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  /* coloque aqui a sua imagem de fundo */
-  background-image: url('img/hero/images.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
 }
 
-/* camada escura por cima da imagem (opcional) */
-.hero-overlay {
-  position: relative;
+/* imagem chamada no HTML */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  padding: 0 1.5rem;
-/*  background: rgba(0, 0, 0, 0.45);*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.55); /* deixa o texto mais visível */
 }
 
-/* conteúdo centralizado */
+/* Conteúdo do hero */
 .hero-content {
-  text-align: center;
-  max-width: 640px;
-  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
 }
 
 .hero-content h1 {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
 }
 
 .hero-content p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 35px;
 }
 
-.hero-btn {
-  display: inline-block;
-  padding: 0.9rem 2.2rem;
-  border-radius: 999px;
-  background: #e67e22;
-  color: #ffffff;
+/* Botões */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: #f08922;
+  padding: 14px 28px;
+  border-radius: 8px;
+  color: #fff;
   font-weight: 600;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: 0.3s;
 }
 
-.hero-btn:hover {
-  background: #cf6d13;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+.btn-primary:hover {
+  background: #d97706;
 }
+
+.btn-outline {
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+}
+
