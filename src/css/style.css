@@ -364,3 +364,8 @@ body {
   object-fit: cover; /* ajusta sem distorcer */
   display: block;    /* remove espaçamento de imagem */
     }
+#horario img {
+  width: 100%;
+  height: auto;       /* mantém proporção correta */
+  display: block;     /* remove bordas brancas */
+}
