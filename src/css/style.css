@@ -358,14 +358,15 @@ body {
   }
 
 
+.horario {
+  padding: 20px;               /* espaço lateral e superior */
+  display: flex;
+  justify-content: center;     /* centraliza */
+}
+
 .horario img {
   width: 100%;
-  height: 100vh;
-  object-fit: cover; /* ajusta sem distorcer */
-  display: block;    /* remove espaçamento de imagem */
-    }
-#horario img {
-  width: 100%;
-  height: auto;       /* mantém proporção correta */
-  display: block;     /* remove bordas brancas */
-}
+  max-width: 600px;            /* limite da imagem */
+  height: auto;
+  border-radius: 10px;         /* opcional */
+  }
