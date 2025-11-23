@@ -180,3 +180,67 @@ body {
     top: 50%;    /* centraliza verticalmente */
     transform: translateY(-50%); /* corrige o centralizado */
 }
+/*hero*/
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* coloque aqui a sua imagem de fundo */
+  background-image: url('img/hero/images.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* camada escura por cima da imagem (opcional) */
+.hero-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 1.5rem;
+/*  background: rgba(0, 0, 0, 0.45);*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* conteúdo centralizado */
+.hero-content {
+  text-align: center;
+  max-width: 640px;
+  color: #ffffff;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 1.5rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  background: #e67e22;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.hero-btn:hover {
+  background: #cf6d13;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
