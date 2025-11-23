@@ -383,5 +383,5 @@ body {
   max-width: none;
 
   object-fit: cover;        /* permite o posicionamento */
-  object-position: 40% 50%; /* 🔥 controle de posição aqui */
+  object-position: 30% 50%; /* 🔥 controle de posição aqui */
 }
