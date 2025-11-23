@@ -371,15 +371,14 @@ body {
   border-radius: 10px;         /* opcional */
 /*  }*/
 .horario {
-  width: 100%;               /* ocupa toda a largura da tela */
-  padding: 20px;             /* espaçamento lateral */
-  box-sizing: border-box;    /* impede que padding aumente a largura */
+  width: 100vw;          /* ocupa toda a largura da tela */
+  margin: 0;
+  padding: 0;
 }
 
 .horario img {
-  width: 100%;               /* sempre ocupa 100% da área da seção */
-  max-width: 100%;           /* nunca ultrapassa a largura do dispositivo */
+  width: 100vw;          /* força ocupar 100% da largura real */
   height: auto;
-  display: block;
-  border-radius: 12px;       /* opcional */
+  display: block;        /* remove espaços brancos */
+  max-width: none;       /* impede que o navegador limite o tamanho */
 }
