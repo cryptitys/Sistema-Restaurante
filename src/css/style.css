@@ -373,33 +373,3 @@ body {
   object-fit: cover;        /* permite o posicionamento */
   object-position: 30% 50%; /* 🔥 controle de posição aqui */
 }
-    /* ===== QUADRO DE INSTRUÇÕES ===== */
-.instrucoes {
-    background: #ffffff;
-    border-left: 5px solid #4a4ae8;
-}
-
-.instrucoes h3 {
-    margin-top: 0;
-    font-weight: 600;
-}
-
-.instrucoes ul {
-    margin-top: 10px;
-    padding-left: 20px;
-    line-height: 1.6;
-}
-
-.instrucoes li {
-    margin-bottom: 6px;
-}
-
-@media (max-width: 480px) {
-    .instrucoes {
-        padding: 12px;
-        font-size: 14px;
-    }
-    .instrucoes ul {
-        padding-left: 16px;
-    }
-}
