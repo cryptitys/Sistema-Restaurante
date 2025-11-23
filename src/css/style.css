@@ -359,14 +359,14 @@ body {
 
 
 .horario {
-  padding: 20px;               /* espaço lateral e superior */
+  padding: 30px;               /* espaço lateral e superior */
   display: flex;
   justify-content: center;     /* centraliza */
 }
 
 .horario img {
   width: 100%;
-  max-width: 600px;            /* limite da imagem */
+  max-width: 800px;            /* limite da imagem */
   height: auto;
   border-radius: 10px;         /* opcional */
   }
