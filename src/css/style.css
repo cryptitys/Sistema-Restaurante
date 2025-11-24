@@ -617,3 +617,57 @@ body {
 .contato-form button:hover {
   background: #005aad;
 }
+/*carrosel logos*/
+.parceiros {
+  padding: 40px 20px;
+  background: #e7f3ff;
+  text-align: center;
+}
+
+.parceiros h2 {
+  font-size: 2rem;
+  color: #003b73;
+  margin-bottom: 20px;
+}
+
+/* --- Carrossel automático --- */
+
+.parceiros-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slide-track {
+  display: flex;
+  gap: 40px;
+  width: calc(200px * 10); /* largura total dos itens */
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.parceiro {
+  width: 140px;
+  height: 140px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.parceiro img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
