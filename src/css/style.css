@@ -552,3 +552,68 @@ body {
   height: 100%;
   border: 0;
   }
+/*contato*/
+.contato {
+  padding: 40px 20px;
+  background: #e7f3ff;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 2rem;
+  color: #003b73;
+  margin-bottom: 25px;
+}
+
+.contato-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #003b73;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.contato-item img {
+  width: 32px;
+  height: 32px;
+}
+
+.contato-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato-form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #bcd7f0;
+  font-size: 1rem;
+}
+
+.contato-form button {
+  padding: 14px;
+  background: #003b73;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contato-form button:hover {
+  background: #005aad;
+}
