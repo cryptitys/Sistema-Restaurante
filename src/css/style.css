@@ -87,99 +87,101 @@ body {
 .logo a:hover img {
     transform: scale(1.05);
     }
+
+
 /*nav burguer*/
 
-.hamburger {
-    display: none;
+/* 1. Estilo do Botão Hamburger (Barrinhas Pretas) */
+.hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espaço entre as barras */
+    padding: 0;
+    z-index: 1001; /* Garante que o botão fique acima do menu */
+    position: relative; /* Necessário para o z-index funcionar */
 }
 
-.bar {
+.hamburger-btn .bar {
     display: block;
     width: 25px;
     height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #101010;
+    background-color: #000; /* Barrinhas pretas */
+    border-radius: 2px;
 }
 
+/* 2. Estilo do Menu (Gradiente, Posição e Animação) */
 .nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* Posicionamento */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px; /* Largura do menu */
+    
+    /* "aparece ate onde fica o ultimo link"
+      Usamos 'height: auto' e 'padding-bottom' para que a altura 
+      seja definida pelo conteúdo (os links).
+    */
+    height: auto;
+    padding: 80px 20px 30px 20px; /* Espaço (top, right, bottom, left) */
+    box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+    /* O Gradiente de azul muito claro 
+      (Ajuste as cores #e0f7fa e #f0f8ff como desejar)
+    */
+    background: linear-gradient(to bottom, #e0f7fa, #f0f8ff);
+
+    /* A Mágica: Animação da Direita para a Esquerda
+      1. Começa escondido: 100% à direita (fora da tela)
+    */
+    transform: translateX(100%);
+    
+    /* 2. Define a animação: 'transform' será animado 
+         durante 0.4 segundos com um efeito 'ease-out'
+    */
+    transition: transform 0.4s ease-out;
 }
 
-.nav-item {
-    margin-left: 5rem;
+/* 3. O Estado "Aberto" do Menu */
+.nav-menu.open {
+    /* 3. Quando a classe 'open' for adicionada (via JS), 
+         o menu volta para a posição 0 (visível na tela)
+    */
+    transform: translateX(0);
 }
 
-.nav-link{
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: #475569;
+/* Estilo dos links dentro do menu */
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-link:hover{
-    color: #482ff7;
+.nav-menu li {
+    margin-bottom: 15px;
 }
 
-.nav-logo {
-    font-size: 2.1rem;
-    font-weight: 500;
-    color: #482ff7;
-}
-
-@media only screen and (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 5rem;
-        flex-direction: column;
-        background-color: #fff;
-        width: 100%;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-item {
-        margin: 2.5rem 0;
-    }
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        -webkit-transform: translateY(8px) rotate(45deg);
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        -webkit-transform: translateY(-8px) rotate(-45deg);
-        transform: translateY(-8px) rotate(-45deg);
-    }
-  }
-
-.hamburger {
+.nav-menu a {
+    text-decoration: none;
+    color: #004a99; /* Cor do texto (azul escuro para contraste) */
+    font-size: 1.2rem;
     display: block;
-    cursor: pointer;
-    position: absolute;
-    right: 20px; /* distância da borda direita */
-    top: 50%;    /* centraliza verticalmente */
-    transform: translateY(-50%); /* corrige o centralizado */
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
 }
+
+.nav-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+        
+
+
 
 /* HERO */
 /* ===== HERO ===== */
