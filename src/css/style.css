@@ -473,3 +473,45 @@ body {
     color: white;
     cursor: pointer;
   }
+
+/*seçao video*/
+  .video-restaurante {
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(180deg, #dff1ff, #f6fbff);
+  }
+
+  .video-restaurante h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2f5f96;
+    font-weight: 600;
+  }
+
+  .video-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+    background: #fff;
+  }
+
+  .video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* Responsividade */
+  @media (max-width: 600px) {
+    .video-restaurante h2 {
+      font-size: 1.6rem;
+    }
+
+    .video-container {
+      border-radius: 14px;
+    }
+  }
