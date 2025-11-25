@@ -751,3 +751,89 @@ body.menu-open {
 
 
 /* ===== FOOTER ===== */
+.footer {
+    width: 100%;
+    padding: 40px 25px;
+    background: #fff;
+    text-align: center;
+    color: #444;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Newsletter */
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 25px;
+}
+
+.newsletter input {
+    width: 70%;
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    background: #f1f1f1;
+    font-size: 15px;
+}
+
+.newsletter button {
+    padding: 15px 20px;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 0 8px 8px 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Links principais */
+.footer-links,
+.footer-links-bottom {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #444;
+    font-size: 16px;
+}
+
+/* Redes sociais */
+.social {
+    margin: 25px 0;
+}
+
+.social a {
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    margin: 0 8px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #444;
+}
+
+/* Logo */
+.footer-brand h2 {
+    color: #3b6cff;
+    margin: 25px 0 10px;
+    font-size: 28px;
+}
+
+/* Copyright */
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+}
