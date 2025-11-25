@@ -751,85 +751,117 @@ body.menu-open {
         /* Footer Styles */
 
 /* ===== FOOTER ===== */
+
 .footer {
-  background: #1b1b1b;
-  color: #fff;
-  padding: 50px 20px 20px;
-  margin-top: 50px;
-  width: 100%;
+  background: #0c1d3c;  /* Azul escuro do pesqueiro */
+  color: #ffffff;
+  padding-top: 60px;
+  font-family: "Poppins", sans-serif;
 }
 
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 40px;
+.footer-top {
   max-width: 1200px;
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 0 20px;
 }
 
-.footer-section h3 {
+.footer-logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-col h3 {
   margin-bottom: 15px;
   font-size: 1.2rem;
-  color: #44c37f; /* Verde destacado do Pesqueiro */
+  color: #5ab3ff; /* Azul claro do pesqueiro */
 }
 
-.footer-section ul {
+.footer-col ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-section ul li {
-  margin: 6px 0;
+.footer-col ul li {
+  margin: 8px 0;
 }
 
-.footer-section ul li a {
-  color: #cfcfcf;
+.footer-col ul li a {
+  color: #d7e9ff;
   text-decoration: none;
+  font-size: 0.95rem;
   transition: 0.3s;
 }
 
-.footer-section ul li a:hover {
-  color: #44c37f;
+.footer-col ul li a:hover {
+  color: #5ab3ff;
 }
 
-/* LOGO */
-.footer-logo {
-  width: 80px;
-  margin-bottom: 10px;
-}
-
-/* TEXTO DE SOBRE */
-.footer-section.about p {
-  color: #cfcfcf;
-  line-height: 1.5;
+/* MAPA */
+.footer-map {
+  width: 100%;
+  height: 130px;
+  border-radius: 10px;
+  border: 2px solid #5ab3ff;
 }
 
 /* REDES SOCIAIS */
+.footer-social {
+  text-align: center;
+  margin: 35px 0;
+}
+
 .footer-social a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  background: #44c37f;
-  color: #fff;
-  margin-right: 10px;
+  width: 45px;
+  height: 45px;
+  background: #5ab3ff;
   border-radius: 50%;
-  font-size: 1.1rem;
+  margin: 0 10px;
+  color: #0c1d3c;
+  font-size: 1.2rem;
   transition: 0.3s;
 }
 
 .footer-social a:hover {
   transform: scale(1.1);
-  background: #35a66b;
+  background: #ffffff;
+  color: #0c1d3c;
 }
 
-/* BARRA FINAL */
+/* BOTTOM */
 .footer-bottom {
+  background: #071426;
   text-align: center;
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #333;
-  color: #cfcfcf;
+  padding: 18px;
+  color: #bcd7ff;
   font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+/* BOTÃO FLUTUANTE WHATSAPP */
+.whats-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  z-index: 999;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.whats-btn:hover {
+  transform: scale(1.1);
 }
