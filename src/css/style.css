@@ -89,57 +89,83 @@ body {
     }
 
 
-
-/* ====== HAMBURGER ====== */
+/* =============================
+   NAVBAR MOBILE (ESTILO A.T.A)
+   ============================= */
 
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  z-index: 9999;
 }
 
 .bar {
   width: 28px;
   height: 4px;
-  background-color: black;
+  background-color: #003b73;
   border-radius: 3px;
-  transition: 0.4s;
+  transition: 0.4s ease;
 }
 
-/* ====== MENU MOBILE ====== */
+/* ======== MOBILE ========== */
 
 @media (max-width: 900px) {
-
+  
   .nav-menu {
     position: fixed;
     top: 0;
-    right: -100%;
+    left: 0;
+    width: 100%;
     height: 100vh;
-    width: 70%;
-    background: linear-gradient(180deg, #e9f5ff, #d9edff, #cfe8ff);
-    box-shadow: -5px 0 20px rgba(0,0,0,0.15);
+
+    /* 🔵 Azul claro com gradiente suave estilo A.T.A */
+    background: linear-gradient(
+      180deg,
+      #e8f3ff 0%,
+      #d8ebff 40%,
+      #cde5ff 100%
+    );
+
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 35px;
-    transition: 0.5s ease;
+
+    gap: 40px;
+
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.55s ease, opacity 0.45s ease;
+    z-index: 999;
   }
+
+  /* ====== MENU ABERTO ====== */
 
   .nav-menu.active {
-    right: 0;
+    transform: translateX(0);
+    opacity: 1;
   }
 
+  /* LINKS DO MENU */
   .nav-link {
-    font-size: 1.4rem;
-    color: #003b73;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #4d2dc6; /* mesmo tom roxo do A.T.A */
+    transition: 0.3s ease;
   }
 
+  .nav-link:hover {
+    transform: scale(1.06);
+  }
+
+  /* ATIVA O HAMBURGER NO MOBILE */
   .hamburger {
     display: flex;
   }
 
-  /* Animação das barras virando X */
+  /* ===== Animação virando X ===== */
 
   .hamburger.active .bar:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
@@ -152,8 +178,7 @@ body {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
   }
-}
-
+    }
         
 
 
