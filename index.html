@@ -176,70 +176,154 @@
 	</section>  
 
 
-
+<!-- Footer Pesqueiro Rota do Peixe -->
 <footer class="footer">
-  <div class="footer-top">
-
-    <div class="footer-col">
-      <img src="LOGO-DO-PESQUEIRO.png" class="footer-logo" alt="Logo Pesqueiro">
-      <p>
-        O Pesqueiro Rota do Peixe oferece lazer, gastronomia, pesca esportiva
-        e diversão para toda a família em um ambiente natural e acolhedor.
-      </p>
+  <div class="footer-container">
+    <div class="footer-section brand">
+      <img src="/logo.png" alt="Logo Pesqueiro" class="logo" />
+      <p>Um paraíso para amantes da pesca, gastronomia e diversão em família.</p>
     </div>
 
-    <div class="footer-col">
-      <h3>Links Úteis</h3>
+    <div class="footer-section">
+      <h3>Institucional</h3>
       <ul>
-        <li><a href="#inicio">Início</a></li>
         <li><a href="#sobre">Sobre Nós</a></li>
-        <li><a href="#cardapio">Cardápio</a></li>
-        <li><a href="#pesca">Pesca</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#historia">Nossa História</a></li>
+        <li><a href="#estrutura">Estrutura</a></li>
+        <li><a href="#eventos">Eventos</a></li>
       </ul>
     </div>
 
-    <div class="footer-col">
-      <h3>Horários</h3>
+    <div class="footer-section">
+      <h3>Serviços</h3>
       <ul>
-        <li>Seg – Sex: <strong>08h às 18h</strong></li>
-        <li>Sábado: <strong>07h às 19h</strong></li>
-        <li>Domingo: <strong>07h às 17h</strong></li>
-        <li>Feriados: <strong>Consultar</strong></li>
+        <li><a href="#pesca">Pesca Esportiva</a></li>
+        <li><a href="#restaurante">Restaurante</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#cardapio">Cardápio</a></li>
       </ul>
     </div>
 
-    <div class="footer-col">
-      <h3>Localização</h3>
-      <iframe
-        class="footer-map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2z0!5e0!3m2!1spt-BR!2sbr!4v00000000000"
-        allowfullscreen=""
-        loading="lazy"
-      ></iframe>
+    <div class="footer-section">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#politicas">Políticas</a></li>
+      </ul>
     </div>
 
-  </div>
-
-  <div class="footer-social">
-    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    <div class="footer-section social">
+      <h3>Siga-nos</h3>
+      <div class="social-icons">
+        <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
   </div>
 
   <div class="footer-bottom">
-    © 2025 Pesqueiro Rota do Peixe — Todos os direitos reservados.
+    <p>© 2025 Pesqueiro Rota do Peixe. Todos os direitos reservados.</p>
+    <div class="bottom-links">
+      <a href="#privacidade">Privacidade</a>
+      <a href="#termos">Termos de Serviço</a>
+    </div>
   </div>
 </footer>
 
-<!-- BOTÃO WHATSAPP -->
-<a href="https://wa.me/5599999999999" class="whats-btn" target="_blank">
-  <i class="fa-brands fa-whatsapp"></i>
-	</a>
-  
+<style>
+  .footer {
+    background: #ffffff;
+    padding: 40px 20px;
+    border-top: 3px solid #1a4e27;
+    color: #1a1a1a;
+    font-family: Arial, sans-serif;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+    color: #1a4e27;
+    margin-bottom: 12px;
+    font-weight: bold;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-section ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .footer-section ul li a:hover {
+    color: #1a4e27;
+  }
+
+  .brand p {
+    max-width: 250px;
+    color: #333;
+  }
+
+  .logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+
+  .icon i {
+    font-size: 22px;
+    color: #1a4e27;
+    transition: 0.3s;
+  }
+
+  .icon:hover i {
+    transform: scale(1.2);
+  }
+
+  .footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .bottom-links a {
+    margin: 0 10px;
+    color: #1a4e27;
+    text-decoration: none;
+  }
+</style>
+
+
+
+
+
+
 	  
-	  
-    <script src="src/js/script.js"></script>
-    <script src="src/js/carrosel.js"></script>
+  <script src="src/js/carrosel.js"></script>
   </body>
 </html>
