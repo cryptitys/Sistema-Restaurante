@@ -224,7 +224,37 @@ body {
   }
 }
 
+/* ======== MENU MOBILE FIXO E INDEPENDENTE ======== */
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 260px;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  z-index: 9999; /* FICA SEMPRE ACIMA DE TUDO */
+  transform: translateX(100%);
+  transition: transform .3s ease-in-out;
+}
 
+.menu-container.open {
+  transform: translateX(0);
+}
+
+/* Ícone do hambúrguer SEMPRE NO CANTO DIREITO */
+.menu-button {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  z-index: 10000;
+  color: black !important; /* sempre preto como você pediu */
+}
+
+/* Evita que qualquer menu mexa no layout */
+body.menu-open {
+  overflow: hidden;
+}
 
 
 /* HERO */
