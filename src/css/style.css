@@ -919,3 +919,50 @@ footer p {
   background: #333;
   transform: translateY(-2px);
 }
+/* Seção completa */
+.brandshowcase-area {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Título */
+.brandshowcase-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 35px;
+}
+
+/* Container das logos */
+.brandshowcase-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+/* Tamanho grande das logos */
+.brandshowcase-logo {
+  height: 80px;   /* AUMENTADO */
+  object-fit: contain;
+  transition: .3s ease;
+  opacity: 0.95;
+}
+
+/* Pequeno efeito suave */
+.brandshowcase-logo:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .brandshowcase-row {
+    gap: 40px;
+  }
+  .brandshowcase-logo {
+    height: 60px;  /* grande no celular também */
+  }
+}
