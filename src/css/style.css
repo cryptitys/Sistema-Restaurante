@@ -136,6 +136,23 @@ body {
       #d7eefe
     );
 
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: .35s ease;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
 
     /* =============================
    NAVBAR DESKTOP
@@ -158,44 +175,13 @@ body {
     padding: 0;
   }
 
-  .nav-link {
-    font-size: 1.2rem;
-    color: #003b73;
-    opacity: 1;
-    transform: none;
-    animation: none;       /* remove animações do mobile */
-  }
-
-  /* Esconde o hamburger no desktop */
-  .hamburger {
-    display: none !important;
-  }
-
+  
   /* Garante que o container móvel nunca apareça */
   .menu-container {
     display: none;
   }
 }
-
-
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-20px);
-    transition: .35s ease;
-    z-index: 999;
-  }
-
-  .nav-menu.active {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-
+  
   /* Links com animação individual */
   .nav-link {
     font-size: 1.9rem;
