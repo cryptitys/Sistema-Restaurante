@@ -63,6 +63,7 @@ body {
   gap: 32px;
   list-style: none;
   align-items: center;
+  margin-left: auto; /* EMPURRA O MENU PARA A DIREITA */
 }
 
 .nav-link {
