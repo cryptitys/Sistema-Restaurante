@@ -494,7 +494,33 @@ body.menu-open {
     margin-bottom: 20px;
   }
 
+ .carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    border-radius: 12px;
+  }
 
+  .carousel-track {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    width: 80%;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    border-radius: 12px;
+    cursor: pointer;
+  }
 
   /* Modal */
   .modal {
