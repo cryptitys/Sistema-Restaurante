@@ -838,15 +838,26 @@ footer p {
     color: #777;
 }
 /*Logo acima - footer*/
-.footer-logo-left {
+.footer-top-row {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
 }
 
-.footer-logo-left img {
+/* Logo esquerda */
+.footer-logo-left {
     width: 120px; /* ajuste conforme quiser */
     height: auto;
-    display: block;
 }
+
+/* Título central */
+.footer-title {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333; /* ajuste se quiser combinar com a paleta */
+    margin: 0;
+  }
