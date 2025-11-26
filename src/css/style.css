@@ -598,9 +598,8 @@ body.menu-open {
 .localizacao {
   padding: 30px 20px;
   text-align: center;
-  background: #e7f3ff; /* azul claro suave */
+  background: linear-gradient(135deg, #ffffff, #e9f5ff); /* branco → azul claro */
 }
-
 .localizacao h2 {
   font-size: 2rem;
   color: #003b73;
@@ -694,70 +693,9 @@ body.menu-open {
   background: #005aad;
 }
 /*carrosel logos*/
-.partners-section {
-  width: 100%;
-  padding: 40px 0;
-  text-align: center;
-}
 
-.partners-title {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 25px;
-  font-weight: 500;
-}
 
-/* CONTAINER DO SLIDER */
-.partners-slider {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
 
-/* FAIXA COM AS LOGOS */
-.slider-track {
-  display: flex;
-  gap: 60px;
-  animation: scroll 18s linear infinite;
-}
-
-.partner-logo {
-  height: 40px;
-  object-fit: contain;
-  transition: 0.3s ease;
-  opacity: 0.9;
-}
-
-/* Preto e branco (padrão) */
-.partner-logo.bw {
-  filter: grayscale(100%) brightness(0.2);
-}
-
-/* Hover mostra a cor real */
-.partner-logo:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-}
-
-/* RESPONSIVIDADE MOBILE */
-@media (max-width: 600px) {
-  .slider-track {
-    gap: 30px;
-  }
-  .partner-logo {
-    height: 28px;
-  }
-}
-
-/* Animação suave */
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
          
 
 
