@@ -37,4 +37,4 @@
       modalPDF.style.display = "none";
     }
   });
-</script>
+
