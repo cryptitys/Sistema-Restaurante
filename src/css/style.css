@@ -944,12 +944,18 @@ footer p {
 }
 
 /* logos */
-.logo-item {
+.logo-item1 {
   height: 130px;              /* você pode alterar aqui fácil */
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
+.logo-item2 {
+  height: 180px;              /* você pode alterar aqui fácil */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  }
 
 .logo-item:hover {
   transform: scale(1.06);
