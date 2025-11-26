@@ -136,6 +136,48 @@ body {
       #d7eefe
     );
 
+
+    /* =============================
+   NAVBAR DESKTOP
+   ============================= */
+
+@media (min-width: 901px) {
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row;   /* coloca os links lado a lado */
+    align-items: center;
+    gap: 35px;             /* espaço entre eles */
+    list-style: none;
+    position: static;      /* remove o overlay do mobile */
+    background: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    color: #003b73;
+    opacity: 1;
+    transform: none;
+    animation: none;       /* remove animações do mobile */
+  }
+
+  /* Esconde o hamburger no desktop */
+  .hamburger {
+    display: none !important;
+  }
+
+  /* Garante que o container móvel nunca apareça */
+  .menu-container {
+    display: none;
+  }
+}
+
+
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 
