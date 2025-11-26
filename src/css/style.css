@@ -483,7 +483,7 @@ body.menu-open {
     line-height: 1.6;
     text-align: center;
     }
-/*seçao carrosel*/
+/*restaurante*/
   .restaurante {
     padding: 40px 20px;
     text-align: center;
@@ -493,34 +493,58 @@ body.menu-open {
     font-size: 2rem;
     margin-bottom: 20px;
   }
+/*carrosel*/
+.partners-fixed {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+}
 
-  .carousel {
-    overflow: hidden;
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    border-radius: 12px;
-  }
+.partners-title {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
 
-  .carousel-track {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 10px;
-  }
+/* Container das logos */
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap; /* para ficar perfeito no celular */
+}
 
-  .carousel-track::-webkit-scrollbar {
-    display: none;
-  }
+/* Estilo das logos */
+.partner-logo {
+  height: 55px;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: .3s ease;
+}
 
-  .carousel-item {
-    width: 80%;
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-    border-radius: 12px;
-    cursor: pointer;
+/* Preto e branco padrão */
+.partner-logo.bw {
+  filter: none;
+}
+
+/* Ao passar o mouse aparece a cor real 
+.partner-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Responsivo mobile */
+@media (max-width: 600px) {
+  .partners-logos {
+    gap: 30px;
   }
+  .partner-logo {
+    height: 38px;
+  }
+}
+
 
   /* Modal */
   .modal {
