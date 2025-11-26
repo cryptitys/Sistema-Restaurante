@@ -115,7 +115,8 @@ body {
 
 /* ===== MENU MOBILE ===== */
 
-@media (max-width: 900px) {
+@media (max-width: 900px
+@media (min-width: 901px)) {
 
   .nav-menu {
     position: absolute;
@@ -154,34 +155,7 @@ body {
     transform: translateY(0);
   }
 
-    /* =============================
-   NAVBAR DESKTOP
-   ============================= */
-
-@media (min-width: 901px) {
-
-  .nav-menu {
-    display: flex;
-    flex-direction: row;   /* coloca os links lado a lado */
-    align-items: center;
-    gap: 35px;             /* espaço entre eles */
-    list-style: none;
-    position: static;      /* remove o overlay do mobile */
-    background: none;
-    opacity: 1;
-    pointer-events: auto;
-    transform: none;
-    box-shadow: none;
-    padding: 0;
-  }
-
-  
-  /* Garante que o container móvel nunca apareça */
-  .menu-container {
-    display: none;
-  }
-}
-  
+   
   /* Links com animação individual */
   .nav-link {
     font-size: 1.9rem;
