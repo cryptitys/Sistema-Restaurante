@@ -145,6 +145,14 @@ body {
     transform: translateY(-9px) rotate(-45deg);
   }
 }
+/* Ícone do hambúrguer SEMPRE NO CANTO DIREITO */
+.menu-button {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  z-index: 10000;
+  color: black !important; /* sempre preto como você pediu */
+}
 
 
 /* ======== MENU MOBILE FIXO E INDEPENDENTE ======== */
@@ -165,14 +173,6 @@ body {
   transform: translateX(0);
 }
 
-/* Ícone do hambúrguer SEMPRE NO CANTO DIREITO */
-.menu-button {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  z-index: 10000;
-  color: black !important; /* sempre preto como você pediu */
-}
 
 /* Evita que qualquer menu mexa no layout */
 body.menu-open {
