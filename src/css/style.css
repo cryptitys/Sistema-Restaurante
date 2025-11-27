@@ -36,101 +36,103 @@ body {
              NAVBAR 
 ============================= */
 
-/* NAVBAR PADRÃO */
-.navbar {
-    width: 100%;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
+
+
+
+/* ===== NAVBAR ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
+  /* Fundo branco + azul clarinho */
+  background: linear-gradient(to bottom, #ffffff, #e7f2ff);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+  padding: 10px 0; /* altura igual à que você usava */
 }
 
-/* LOGO */
-.navbar .logo img {
-    width: 120px;
+
+/* ===== NAV CONTAINER ===== */
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* LINKS */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+
+/* ===== LOGO ===== */
+.logo img {
+  height: 55px;     /* tamanho igual ao anterior */
+  width: auto;
+  object-fit: contain;
 }
 
-.nav-links li a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: #084c8e; /* azul do pesqueiro */
-    font-weight: 600;
-    transition: 0.3s;
+
+/* ===== MENU ===== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
-.nav-links li a:hover {
-    color: #036bd6;
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.2s;
 }
 
-/* MENU ICON (MOBILE) */
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+nav ul li a:hover {
+  color: #0a58ca;
 }
 
-.menu-icon span {
-    width: 26px;
-    height: 3px;
-    background: #084c8e;
-    border-radius: 5px;
-    transition: .3s;
+
+/* ===== AJUSTE PARA O FIXED ===== */
+body {
+  padding-top: 85px; /* Compensa a altura da navbar */
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
 
-    .menu-icon {
-        display: flex;
-    }
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
 
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: white;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        gap: 20px;
-        height: 0;
-        overflow: hidden;
-        transition: .4s;
-        box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
-    }
-
-    .nav-links.open {
-        height: 260px;
-    }
-}
-
-/* ANIMAÇÃO DO ÍCONE */
-.menu-icon.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(8px);
-}
-.menu-icon.active span:nth-child(2) {
-    opacity: 0;
-}
-.menu-icon.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-8px);
+  nav ul {
+    gap: 18px;
   }
 
+  .logo img {
+    height: 50px;
+  }
 
+  body {
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .nav-container {
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  body {
+    padding-top: 105px;
+  }
+  }
 
 
 
