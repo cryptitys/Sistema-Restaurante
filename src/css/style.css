@@ -41,18 +41,7 @@ body {
    NAVBAR PROFISSIONAL — RESPONSIVA (CELULAR / TABLET / PC)
    ========================================================= */
 
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
 
-body {
-  background: #f9fbff;
-  padding-top: 110px; /* espaço certinho para a nav */
-}
 
 
 /* ===== NAVBAR GERAL ===== */
