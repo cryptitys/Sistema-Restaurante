@@ -31,124 +31,110 @@ body {
   top: 0;
 }
 
-/* Cabeçalho */
-/* ===== NAVBAR ===== */
+
 /* =============================
-        NAVBAR BASE
+             NAVBAR 
 ============================= */
 
+/* NAVBAR PADRÃO */
 .navbar {
-  width: 100%;
-  height: 80px;
-  padding: 0 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #ffffff;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
-
-.logo img {
-  height: 60px;
-}
-/* Botão hambúrguer */
-.navbar-toggle {
-  width: 32px;
-  height: 28px;
-  border: none;
-  background: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  padding: 0;
-}
-
-.navbar-toggle .bar {
-  height: 3px;
-  width: 100%;
-  background: #fff;
-  border-radius: 999px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Menu (mobile: escondido) */
-.navbar-menu {
-  position: fixed;
-  top: 64px;
-  right: 0;
-  width: 70%;
-  max-width: 280px;
-  height: calc(100vh - 64px);
-  background: #111827;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  gap: 1rem;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-}
-
-.nav-link {
-  color: #e5e7eb;
-  text-decoration: none;
-  font-size: 1rem;
-  padding: 0.5rem 0;
-}
-
-.nav-link:hover {
-  color: #60a5fa;
-}
-
-/* Estado aberto do menu */
-.navbar-menu.open {
-  transform: translateX(0);
-}
-
-/* Animação do hambúrguer para "X" */
-.navbar-toggle.open .bar:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-
-.navbar-toggle.open .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.navbar-toggle.open .bar:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-}
-
-/* Desktop / telas maiores */
-@media (min-width: 768px) {
-  .navbar {
-    padding: 0 3rem;
-  }
-
-  .navbar-toggle {
-    display: none;
-  }
-
-  .navbar-menu {
-    position: static;
-    transform: none;
-    height: auto;
-    width: auto;
-    background: transparent;
-    flex-direction: row;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
-    padding: 0;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+/* LOGO */
+.navbar .logo img {
+    width: 120px;
+}
+
+/* LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #084c8e; /* azul do pesqueiro */
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #036bd6;
+}
+
+/* MENU ICON (MOBILE) */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 26px;
+    height: 3px;
+    background: #084c8e;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: white;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        height: 0;
+        overflow: hidden;
+        transition: .4s;
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.open {
+        height: 260px;
+    }
+}
+
+/* ANIMAÇÃO DO ÍCONE */
+.menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+.menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
   }
 
-  .nav-link {
-    font-size: 0.95rem;
-  }
-}
-/* === btn amburguer ====*/
+
+
+
+
+
 /* ===== HERO ===== */
 
 .hero {
