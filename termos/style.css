@@ -191,7 +191,10 @@ body {
       }
     }
 /* Fundo geral da página */
-
+#termos {
+  padding: 70px 20px;
+  margin-top: 70px; /* distancia da navbar */
+      }
 
 /* Seção Termos */
 #termos {
