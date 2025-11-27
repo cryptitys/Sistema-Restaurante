@@ -190,6 +190,10 @@ body {
         font-weight: 500;
       }
     }
+#privacidade {
+  padding: 70px 20px;
+  margin-top: 40px; /* distancia da navbar */
+}
 /* ===== SEÇÃO PRIVACIDADE ===== */
 #privacidade {
   width: 100%;
