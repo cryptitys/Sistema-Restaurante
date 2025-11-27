@@ -241,14 +241,20 @@ body {
     margin-bottom: 15px;
 }
 
-/* ===== DATA FINAL (manter cor atual) ===== */
+/* ===== DATA FINAL (manter cor atual) ===== 
 .privacidade-data {
     text-align: right;
     margin-top: 25px;
     font-style: italic;
     color: #555;
 }
-
+/* Atualização final */
+.privacidade-data .update {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #999;
+  font-style: italic;
+}
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 600px) {
     .privacidade-card {
