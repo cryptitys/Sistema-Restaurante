@@ -1,0 +1,352 @@
+/* Reset e Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+
+/* =============================
+             NAVBAR 
+============================= */
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: #ffffff; /* Navbar branca */
+    color: #333;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease-out;
+     justify-content: space-between; /* separa logo e menu */
+     padding: 0 25px; /* AUMENTE OU DIMINUA ESSE VALOR */
+}
+
+/* Navbar ao rolar */
+.navbar.scrolled {
+    min-height: 8vh;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== LOGO ===== */
+.logo a {
+    color: #6d28d9; /* Roxo vibrante */
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #2563eb; /* Azul suave ao passar o mouse */
+}
+/* Logo com imagem */
+.logo img {
+    height: 60px; /* tamanho ideal para a navbar */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao rolar */
+.navbar.scrolled .logo img {
+    height: 45px; /* diminui levemente ao rolar */
+}
+
+/* Efeito hover opcional */
+.logo a:hover img {
+    transform: scale(1.05);
+    }
+/*nav burguer*/
+
+    /* Botão hamburguer */
+    .menu-btn {
+      width: 44px; height: 44px;
+      background: transparent; border: none;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      cursor: pointer; z-index: 201;
+      position: absolute;
+      top: 10px; right: 20px;
+   
+    }
+    .menu-btn span {
+      display: block;
+      height: 2px; width: 28px;
+      background: #000; /*mexi aq*/
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: .3s;
+    }
+    .menu-btn.open span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .menu-btn.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-btn.open span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* MENU GRADIENTE ROXO - abaixo do header */
+    .nav-menu {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      width: 100vw;
+      max-height: 0;
+      background: linear-gradient(135deg, #ffffff, #e9f3ff); /* branco → azul claro */   box-shadow: 0 4px 32px rgba(140,92,246,0.10);
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.52,0.16,0.24,0.96);
+      z-index: 199;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav-menu.open {
+      max-height: 350px;
+    }
+
+    .nav-menu ul {
+      margin: 0; padding: 0;
+      list-style: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav-menu li {
+      width: 100%;
+    }
+    .nav-menu a {
+      color: #000; /*mexi aqui*/
+      padding: 16px 0;
+      text-align: center;
+      width: 100%;
+      font-size: 1.15em;
+      text-decoration: none;
+      transition: background .18s, font-weight .18s;
+      display: block;
+    }
+    .nav-menu a:hover {
+      background: #000; /*mexi aqui*/
+      font-weight: 600;
+    }
+
+    @media(min-width: 768px) {
+      .navbar { position: relative; box-shadow: none;}
+      .menu-btn { display: none !important; }
+      .nav-menu {
+        position: static;
+        background: none;
+        box-shadow: none;
+        max-height: none;
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        top: auto;
+        left: auto;
+      }
+      .nav-menu.open { max-height: none; }
+      .nav-menu ul { flex-direction: row;}
+      .nav-menu li { width: auto;}
+      .nav-menu a {
+        color: #000; /*mexi por ultimo*/
+        padding: 12px 18px;
+        background: transparent;
+        font-weight: 500;
+      }
+    }
+/* ====== SEÇÃO SOBRE O SITE ====== */
+.sobre-site-section {
+  width: 100%;
+  padding: 60px 20px;
+
+  /* fundo igual ao estilo do site */
+  background: linear-gradient(to bottom, #e7f2ff, #ffffff);
+}
+
+.sobre-container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* ===== TÍTULO ===== */
+.sobre-titulo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0a58ca;
+  margin-bottom: 20px;
+}
+
+/* ===== TEXTO ===== */
+.sobre-texto {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 600px) {
+  .sobre-container {
+    padding: 25px;
+  }
+
+  .sobre-titulo {
+    font-size: 26px;
+  }
+
+  .sobre-texto {
+    font-size: 16px;
+  }
+      }
+/* ===== FOOTER ===== */
+.footer {
+    width: 100%;
+    padding: 40px 25px;
+    background: #fff;
+    text-align: center;
+    color: #444;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Newsletter */
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 25px;
+}
+
+.newsletter input {
+    width: 70%;
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    background: #f1f1f1;
+    font-size: 15px;
+}
+
+.newsletter button {
+    padding: 15px 20px;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 0 8px 8px 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Links principais */
+.footer-links,
+.footer-links-bottom {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #444;
+    font-size: 16px;
+}
+
+/* Redes sociais */
+.social {
+    margin: 25px 0;
+}
+
+.social a {
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    margin: 0 8px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #444;
+}
+
+/* Logo */
+.footer-brand h2 {
+    color: #3b6cff;
+    margin: 25px 0 10px;
+    font-size: 28px;
+}
+
+/* Copyright */
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+}
+/*Logo acima - footer*/
+.footer-top-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+/* Logo esquerda */
+.footer-logo-left {
+    width: 120px; /* ajuste conforme quiser */
+    height: auto;
+}
+
+/* Título central */
+.footer-title {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333; /* ajuste se quiser combinar com a paleta */
+    margin: 0;
+  }
