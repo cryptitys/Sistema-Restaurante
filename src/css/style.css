@@ -532,8 +532,7 @@ body {
 .localizacao {
   padding: 30px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #ffffff, #e9f5ff); /* branco → azul claro */
-}
+  background: #e9f3ff;
 .localizacao h2 {
   font-size: 2rem;
   color: #003b73;
