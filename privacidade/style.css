@@ -203,58 +203,45 @@ body {
   color: white;
 }
 
-/* Container principal */
-#privacidade .priv-container {
-  max-width: 900px;
-  margin: auto;
-  background: #000;
-  padding: 40px;
-  border-radius: 30px;
-
-  border: 1px solid #1e1e1f;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-
-  backdrop-filter: blur(6px);
-  transition: 0.3s ease;
+/* Container da seção Privacidade */
+.privacidade-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 80px auto 40px auto; /* espaço da navbar */
 }
 
-#privacidade .priv-container:hover {
-  box-shadow: 0 0 30px rgba(0, 170, 255, 0.3);
-  border-color: rgba(0, 170, 255, 0.4);
+/* Título com gradiente igual ao Sobre */
+.privacidade-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(90deg, #8a2be2, #ff1493);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
 }
 
-/* Título com gradiente azul */
-#privacidade h2 {
-  font-size: 36px;
-  font-weight: 800;
-  margin-bottom: 25px;
-  background: linear-gradient(to right, #00aaff, #0077ff);
-  -webkit-background-clip: text;
-  color: transparent;
+/* Parágrafos pretos */
+.privacidade-section p {
+    font-size: 1rem;
+    color: #000;
+    line-height: 1.7;
+    margin-bottom: 18px;
 }
 
-/* Parágrafos */
-#privacidade p {
-  color: ##000;
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 20px;
+/* Subtítulos (se você tiver) */
+.privacidade-section h3 {
+    font-size: 1.4rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #000;
 }
 
-/* Subtítulos */
-#privacidade h3 {
-  color: ##000;
-  font-size: 24px;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-
-/* Data final */
-#privacidade .update {
-  color: #808080;
-  margin-top: 40px;
-  font-size: 14px;
-  font-style: italic;
+/* Data final — não mexi na cor */
+.privacidade-data {
+    text-align: right;
+    margin-top: 25px;
+    font-style: italic;
 }
 
 /* ===== RESPONSIVO ===== */
