@@ -55,162 +55,100 @@ body {
 .logo img {
   height: 60px;
 }
-
-/* MENU PADRÃO (DESKTOP) */
-.nav-menu {
+/* Botão hambúrguer */
+.navbar-toggle {
+  width: 32px;
+  height: 28px;
+  border: none;
+  background: none;
   display: flex;
-  flex-direction: row;
-  gap: 32px;
-  list-style: none;
-  align-items: center;
-  margin-left: auto; /* EMPURRA O MENU PARA A DIREITA */
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navbar-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 999px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Menu (mobile: escondido) */
+.navbar-menu {
+  position: fixed;
+  top: 64px;
+  right: 0;
+  width: 70%;
+  max-width: 280px;
+  height: calc(100vh - 64px);
+  background: #111827;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
 }
 
 .nav-link {
+  color: #e5e7eb;
   text-decoration: none;
-  font-size: 1.2rem;
-  color: #003b73;
-  transition: .2s;
+  font-size: 1rem;
+  padding: 0.5rem 0;
 }
 
 .nav-link:hover {
-  color: #4d2db7;
+  color: #60a5fa;
 }
 
-/* ÍCONE HAMBÚRGUER (OCULTO NO DESKTOP) */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.bar {
-  width: 30px;
-  height: 4px;
-  background: #000;
-  border-radius: 3px;
-  transition: .3s;
-}
-
-/* =============================
-        MOBILE
-============================= */
-
-@media (max-width: 900px) {
-
-  /* Esconde os links no mobile inicialmente */
-  .nav-menu {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 100%;
-    flex-direction: column;
-    background: #f4faff;
-    padding: 40px 0 50px;
-    gap: 40px;
-
-    opacity: 0;
-    transform: translateY(-20px);
-    pointer-events: none;
-    transition: .3s ease;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-
-  /* Quando o menu abre */
-  .nav-menu.active {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  .nav-link {
-    font-size: 1.6rem;
-    color: #4d2db7;
-  }
-
-  /* Mostra o hambúrguer no mobile */
-  .hamburger {
-    display: flex;
-  }
-
-  /* Animação para X */
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-}
-/* Ícone do hambúrguer SEMPRE NO CANTO DIREITO */
-.menu-button {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  z-index: 10000;
-  color: black !important; /* sempre preto como você pediu */
-}
-
-
-/* ======== MENU MOBILE FIXO E INDEPENDENTE ======== */
-.menu-container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 260px;
-  background: white;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-  z-index: 9999; /* FICA SEMPRE ACIMA DE TUDO */
-  transform: translateX(100%);
-  transition: transform .3s ease-in-out;
-}
-
-.menu-container.open {
+/* Estado aberto do menu */
+.navbar-menu.open {
   transform: translateX(0);
 }
 
-
-/* Evita que qualquer menu mexa no layout */
-body.menu-open {
-  overflow: hidden;
-}
-/* Condição que força o menu a alinhar em coluna SOMENTE no mobile + aberto */
-@media (max-width: 900px) {
-    .nav-menu.active {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 40px !important;
-        width: 100% !important;
-    }
-}
-@media (max-width: 900px) {
-    .navbar {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        z-index: 99999 !important;
-    }
-
-    .nav-menu {
-        top: 80px !important; /* garante que o menu fica grudado na navbar */
-    }
-}
-@media (max-width: 900px) {
-    .hamburger {
-        position: absolute !important;
-        right: 20px !important;
-        top: 22px !important;
-    }
+/* Animação do hambúrguer para "X" */
+.navbar-toggle.open .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
 }
 
-/* HERO */
+.navbar-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.open .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Desktop / telas maiores */
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0 3rem;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-menu {
+    position: static;
+    transform: none;
+    height: auto;
+    width: auto;
+    background: transparent;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+  }
+}
+/* === btn amburguer ====*/
 /* ===== HERO ===== */
 
 .hero {
