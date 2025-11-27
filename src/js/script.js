@@ -1,19 +1,28 @@
 //========= menu amburguer ===========//
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".nav-menu");
+  const btn = document.querySelector('.menu-btn');
+const nav = document.querySelector('.nav-menu');
+btn.addEventListener('click', () => {
+  nav.classList.toggle('open');
+  btn.classList.toggle('open');
+});
 
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
+// Opcional: fecha menu ao clicar em um link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    btn.classList.remove('open');
   });
+});
 
-  // Fechar menu ao clicar em um link
-  document.querySelectorAll(".nav-link").forEach(link =>
-    link.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navMenu.classList.remove("active");
-    })
-  );
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".navbar");
+  if (window.scrollY > 0) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
+ 
 //======= fim CD amburguer  ==========//
 // ======= modal PDF cardápio ========//
   const openPDF = document.getElementById("openMenuPDF");
