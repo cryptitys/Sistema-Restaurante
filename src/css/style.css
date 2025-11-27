@@ -151,7 +151,7 @@ body {
       width: 100%;
     }
     .nav-menu a {
-      color: #fff;
+      color: #000; /*mexi aqui*/
       padding: 16px 0;
       text-align: center;
       width: 100%;
