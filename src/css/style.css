@@ -161,7 +161,7 @@ body {
       display: block;
     }
     .nav-menu a:hover {
-      background: rgba(255,255,255,0.07);
+      background: #000; /*mexi aqui*/
       font-weight: 600;
     }
 
