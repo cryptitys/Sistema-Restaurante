@@ -196,72 +196,76 @@ body {
   margin-top: 40px; /* distancia da navbar */
 }
 /* ===== SEÇÃO PRIVACIDADE ===== */
-#privacidade {
-  width: 100%;
-  padding: 70px 20px;
-  background: #ffffff;
-  color: white;
-}
-
-/* Container da seção Privacidade */
 .privacidade-section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: 80px auto 40px auto; /* espaço da navbar */
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
 }
 
-/* Título com gradiente igual ao Sobre */
-.privacidade-section h2 {
-    font-size: 2.5rem;
+/* ===== CARD BRANCO ===== */
+.privacidade-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 22px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid #eaeaea;
+}
+
+/* ===== TÍTULO GRADIENTE ===== */
+.privacidade-card h2 {
+    font-size: 2.4rem;
     font-weight: 700;
     text-align: center;
     background: linear-gradient(90deg, #8a2be2, #ff1493);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
-/* Parágrafos pretos */
-.privacidade-section p {
-    font-size: 1rem;
-    color: #000;
-    line-height: 1.7;
-    margin-bottom: 18px;
-}
-
-/* Subtítulos (se você tiver) */
-.privacidade-section h3 {
-    font-size: 1.4rem;
+/* ===== SUBTÍTULOS ===== */
+.privacidade-card h3 {
     margin-top: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
     color: #000;
+    font-weight: 600;
 }
 
-/* Data final — não mexi na cor */
+/* ===== TEXTOS ===== */
+.privacidade-card p {
+    font-size: 1rem;
+    color: #222;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* ===== DATA FINAL (manter cor atual) ===== */
 .privacidade-data {
     text-align: right;
     margin-top: 25px;
     font-style: italic;
+    color: #555;
 }
 
-/* ===== RESPONSIVO ===== */
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 600px) {
-  #privacidade .priv-container {
-    padding: 25px;
-  }
+    .privacidade-card {
+        padding: 30px 20px;
+    }
 
-  #privacidade h2 {
-    font-size: 28px;
-  }
+    .privacidade-card h2 {
+        font-size: 2rem;
+    }
+}
 
-  #privacidade h3 {
-    font-size: 20px;
-  }
 
-  #privacidade p {
-    font-size: 16px;
-  }
-      }
+
+
+
+
+
 /* ===== FOOTER ===== */
 .footer {
     width: 100%;
