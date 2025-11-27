@@ -101,11 +101,12 @@ body {
       cursor: pointer; z-index: 201;
       position: absolute;
       top: 10px; right: 20px;
+   
     }
     .menu-btn span {
       display: block;
       height: 2px; width: 28px;
-      background: #8B5CF6;
+      background: #000; /*mexi aq*/
       margin: 5px 0;
       border-radius: 2px;
       transition: .3s;
