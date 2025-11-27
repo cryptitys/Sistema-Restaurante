@@ -190,6 +190,65 @@ body {
         font-weight: 500;
       }
     }
+/* Fundo geral da página */
+
+
+/* Seção Termos */
+#termos {
+  padding: 70px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.termos-card {
+  background: #111112;
+  max-width: 900px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 28px;
+  border: 1px solid #1e1e1f;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  transition: 0.3s ease;
+}
+
+.termos-card:hover {
+  border-color: #00aaff80;
+  box-shadow: 0 0 35px rgba(0, 170, 255, 0.2);
+}
+
+/* Título com gradiente */
+.termos-card h2 {
+  font-size: 36px;
+  font-weight: 700;
+  background: linear-gradient(to right, #00aaff, #0077ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 25px;
+}
+
+/* Subtítulos */
+.termos-card h3 {
+  font-size: 22px;
+  color: #00aaff;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+/* Textos */
+.termos-card p {
+  color: #d0d0d0;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+/* Atualização final */
+.termos-card .update {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #999;
+  font-style: italic;
+}
 /* ===== FOOTER ===== */
 .footer {
     width: 100%;
