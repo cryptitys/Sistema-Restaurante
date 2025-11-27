@@ -202,7 +202,7 @@ body {
 
 /* Card */
 .termos-card {
-  background: #111112;
+  background: #ffffff;
   max-width: 900px;
   width: 100%;
   padding: 40px;
@@ -237,7 +237,7 @@ body {
 
 /* Textos */
 .termos-card p {
-  color: #d0d0d0;
+  color: #000;
   line-height: 1.7;
   font-size: 17px;
 }
